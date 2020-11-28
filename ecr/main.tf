@@ -15,6 +15,10 @@ output repository_url {
   value = aws_ecr_repository.this.repository_url
 }
 
+provider "aws" {
+  region = "ap-northeast-1"
+}
+
 resource "aws_ecr_repository" "this" {
   name = var.name
   image_scanning_configuration {
